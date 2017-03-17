@@ -38,17 +38,15 @@ FLAGS_MCU := -mcpu=$(MCU)
 FLAGS_AS  := $(FLAGS_MCU) $(OPT) -g -gdwarf-2 -mthumb
 FLAGS_C   := $(FLAGS_MCU) $(OPT) -g -gdwarf-2 -mthumb -fomit-frame-pointer \
              -Wall -fverbose-asm $(DEFS)
-
 FLAGS_CXX := $(FLAGS_MCU) $(OPT) -g -gdwarf-2 -mthumb -std=c++11 \
              -fomit-frame-pointer -Wall -fverbose-asm -fno-exceptions \
              -fno-rtti -fno-threadsafe-statics -fvisibility=hidden \
              $(DEFS)
-
 FLAGS_LD  := $(FLAGS_MCU) $(OPT) -lm -g -gdwarf-2 -mthumb -nostartfiles \
              -Xlinker --gc-sections -T$(LINK_SCRIPT) \
              -Wl,-Map=$(PROJECT).map,--cref,--no-warn-mismatch
 
-OBJS      := $(filter $.o, $(SRC_ASM:.s=.o)) $(filter %.o, $(SRC_C:.c=.o))
+OBJS      := $(filter %.o, $(SRC_ASM:.s=.o)) $(filter %.o, $(SRC_C:.c=.o))
 
 all: $(OBJS) $(PROJECT).elf $(PROJECT).hex $(PROJECT).bin
 	$(SIZE) $(PROJECT).elf
