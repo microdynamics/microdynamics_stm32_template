@@ -22,7 +22,7 @@ INCDIR  += -I../Libraries/CMSIS/ \
            -I../Modules/Module_Led/ \
            -I../User/ \
 
-LINK_SCRIPT := ../Libraries/LinkScript/stm32f10x_flash.ld
+LINK_SCRIPT := ../Libraries/LinkScript/stm32f10x_flash.lds
 
 CC_PREFIX := arm-none-eabi-
 
