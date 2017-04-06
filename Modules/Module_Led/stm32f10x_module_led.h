@@ -3,7 +3,7 @@
 
 #include "stm32f10x_driver_io.h"
 
-#define LED0 PA_OUT(2)
+#define LED0 PB_OUT(1)
 
 void LED_Init(void);
 

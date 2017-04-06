@@ -11,7 +11,7 @@ int main(void)
         LED0 = 0;
         Delay_TimeMs(1000);
         LED0 = 1;
-        Delay_TimeUs(1000);
+        Delay_TimeMs(1000);
     }
 
     return 0;
