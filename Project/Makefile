@@ -10,7 +10,6 @@ SRC_ASM := ../Libraries/CMSIS/startup/gcc/startup_stm32f10x_md.s
 SRC_C   += $(wildcard ../Libraries/CMSIS/*.c)
 SRC_C   += $(wildcard ../Libraries/FWLib/src/*.c)
 SRC_C   += $(wildcard ../Drivers/Driver_Delay/*.c)
-# SRC_C   += $(wildcard ../Drivers/Driver_USART/*.c)
 SRC_C   += $(wildcard ../Modules/Module_Led/*.c)
 SRC_C   += $(wildcard ../User/*.c)
 
